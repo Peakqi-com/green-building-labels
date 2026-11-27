@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>25 枚綠建築標章｜從台灣 EEWH 看懂全世界的綠建築</title>
+<meta name="description" content="用互動方式認識全球 25 種綠建築標章：台灣 EEWH、LEED、BREEAM、WELL、CASBEE……看它們評什麼、怎麼分級、差在哪裡。">
+<meta property="og:title" content="25 枚綠建築標章">
+<meta property="og:description" content="從台灣 EEWH 看懂全世界的綠建築評估制度。">
+<meta name="theme-color" content="#15372A">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%232F9E5B'/><path d='M9 20c6 0 11-5 13-11-7 0-12 4-13 11z' fill='%23F1F4EA'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<a class="skip" href="#wall">跳到標章牆</a>
+<header class="hero" id="top">
+  <div class="hero-stage" aria-hidden="true">
+    <canvas id="scene"></canvas>
+    <svg class="hero-static" viewBox="0 0 400 300"><rect x="0" y="230" width="400" height="70" fill="#7C9A3B"/><rect x="120" y="110" width="160" height="120" fill="#F1F4EA" stroke="#15372A" stroke-width="4"/><path d="M110 112 200 60l90 52z" fill="#2F9E5B"/><g fill="#8ED1EE" stroke="#15372A" stroke-width="3"><rect x="140" y="135" width="34" height="34"/><rect x="226" y="135" width="34" height="34"/><rect x="183" y="180" width="34" height="50"/></g><g fill="#15372A"><rect x="150" y="78" width="40" height="6" transform="rotate(-30 170 81)"/><rect x="205" y="78" width="40" height="6" transform="rotate(30 225 81)"/></g><circle cx="340" cy="60" r="26" fill="#FFC233"/><g fill="#2F9E5B"><circle cx="70" cy="190" r="34"/><circle cx="330" cy="200" r="26"/></g><rect x="66" y="200" width="8" height="32" fill="#15372A"/><rect x="326" y="210" width="8" height="22" fill="#15372A"/></svg>
+  </div>
+  <div class="hero-copy">
+    <p class="hero-kicker" data-depth="0.5">全世界有幾十種方法替建築打分數</p>
+    <h1 data-depth="0.32"><span>25 枚</span><span>綠建築標章</span></h1>
+    <p class="hero-lead" data-depth="0.18">往下滑，看一棟普通的房子怎麼一步步變綠，再認識台灣的 EEWH 和其他 24 枚標章。</p>
+  </div>
+  <div class="hero-progress" aria-hidden="true">
+    <span data-step="0">種樹</span><span data-step="1">鋪太陽能板</span><span data-step="2">屋頂綠化</span><span data-step="3">風力發電</span>
+  </div>
+</header>
+
+<main>
+<section class="sec intro" id="what">
+  <div class="wrap">
+    <h2>標章在評什麼？</h2>
+    <p class="lead">綠建築標章是第三方替建築做的「健康檢查」。各國系統項目不同，但大多離不開四件事。點一下，看房子哪裡在出力。</p>
+    <div class="aspects">
+      <div class="aspect-tabs" role="tablist" aria-label="四大面向">
+        <button role="tab" aria-selected="true" data-a="eco" style="--c:var(--eco)">生態</button>
+        <button role="tab" aria-selected="false" data-a="energy" style="--c:var(--energy)">節能</button>
+        <button role="tab" aria-selected="false" data-a="waste" style="--c:var(--waste)">減廢</button>
+        <button role="tab" aria-selected="false" data-a="health" style="--c:var(--health)">健康</button>
+      </div>
+      <svg class="house" viewBox="0 0 520 360" role="img" aria-labelledby="house-t">
+        <title id="house-t">綠建築剖面示意圖</title>
+        <rect x="0" y="300" width="520" height="60" fill="#d7dfc6"/>
+        <g class="part eco"><rect x="20" y="300" width="120" height="14" fill="#2F9E5B"/><g fill="#9BB886"><rect x="30" y="316" width="16" height="10"/><rect x="58" y="316" width="16" height="10"/><rect x="86" y="316" width="16" height="10"/><rect x="114" y="316" width="16" height="10"/></g><circle cx="60" cy="230" r="44" fill="#2F9E5B"/><rect x="55" y="250" width="10" height="50" fill="#15372A"/><path d="M420 300v-20m14 20v-30m14 30v-18" stroke="#2F9E5B" stroke-width="6"/></g>
+        <rect x="160" y="140" width="220" height="160" fill="#fff" stroke="#15372A" stroke-width="4"/>
+        <path d="M148 142 270 70l122 72z" fill="#15372A"/>
+        <g class="part energy"><g transform="rotate(-30.5 210 106)"><rect x="180" y="100" width="70" height="10" fill="#FFC233" stroke="#15372A" stroke-width="2"/></g><circle cx="470" cy="60" r="28" fill="#FFC233"/><path d="M380 160h40" stroke="#FFC233" stroke-width="8"/><path d="M445 82 395 125" stroke="#FFC233" stroke-width="3" stroke-dasharray="6 6"/></g>
+        <g class="part waste"><g fill="#7C9A3B"><rect x="180" y="270" width="40" height="30"/><rect x="222" y="270" width="40" height="30"/><rect x="200" y="240" width="40" height="30"/></g><path d="M300 262a22 22 0 1 1 30 22" fill="none" stroke="#7C9A3B" stroke-width="6"/><path d="m322 290 10-6-4 12z" fill="#7C9A3B"/></g>
+        <g class="part health"><g fill="#8ED1EE" stroke="#15372A" stroke-width="3"><rect x="190" y="170" width="50" height="44"/><rect x="300" y="170" width="50" height="44"/></g><path d="M120 190q30-12 60 0t60 0" fill="none" stroke="#4FB3DE" stroke-width="5" stroke-linecap="round"/><path d="M470 220c0 14-10 22-18 22s-18-8-18-22 18-36 18-36 18 22 18 36z" fill="#4FB3DE"/></g>
+      </svg>
+      <div class="aspect-text" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec map-sec" id="map">
+  <div class="wrap">
+    <h2>25 枚標章在哪裡</h2>
+    <p class="lead">亞洲最多，有 11 枚。點地圖上的點，直接跳到那張標章。</p>
+    <div class="map" id="worldmap"></div>
+    <ul class="legend" aria-label="圖例"></ul>
+  </div>
+</section>
+
+<section class="sec wall-sec" id="wall">
+  <div class="wrap">
+    <h2>標章牆</h2>
+    <p class="lead">每張郵票是一枚標章。點一下翻面看重點，再點「完整資料」看分級與評估項目。</p>
+    <div class="filters">
+      <div class="chips" data-key="region" aria-label="依地區篩選"></div>
+      <div class="chips" data-key="focus" aria-label="依評估重點篩選"></div>
+    </div>
+    <p class="count" aria-live="polite"></p>
+    <ul class="stamps" id="stamps"></ul>
+  </div>
+</section>
+
+<section class="sec eewh" id="eewh">
+  <div class="wrap">
+    <h2>台灣的 EEWH：九大指標</h2>
+    <p class="lead">EEWH 取自生態 Ecology、節能 Energy saving、減廢 Waste reduction、健康 Health 的字首。四大指標群底下共九項指標，點圓環上的任何一段看說明。</p>
+    <div class="ring-wrap">
+      <svg class="ring" id="ring" viewBox="-160 -160 320 320" role="group" aria-label="EEWH 九大指標圓環"></svg>
+      <div class="ring-info" aria-live="polite"></div>
+    </div>
+    <h3>拉拉看：拿到幾分是什麼等級</h3>
+    <p class="note">示意試算，不是正式評定。正式評估依《綠建築評估手冊》各指標公式計算。</p>
+    <div class="calc">
+      <div class="sliders" id="sliders"></div>
+      <div class="result">
+        <div class="medal" id="medal"><span class="medal-score">0</span><span class="medal-level">未達標</span></div>
+        <ol class="levels" id="levels"></ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec compare" id="compare">
+  <div class="wrap">
+    <h2>一張表比一比</h2>
+    <p class="lead">按欄位名稱可以排序。手機上每列會變成可展開的卡片。</p>
+    <div class="table-scroll" tabindex="0" aria-label="標章比較表，可橫向捲動">
+      <table id="table"><thead><tr>
+        <th><button data-sort="abbr">標章</button></th><th><button data-sort="country">地區</button></th><th><button data-sort="year">創立</button></th><th><button data-sort="levels">分級數</button></th><th>最高等級</th><th>評估重點</th>
+      </tr></thead><tbody></tbody></table>
+    </div>
+    <div class="acc" id="acc"></div>
+  </div>
+</section>
+</main>
+
+<footer class="sec foot" id="sources">
+  <div class="wrap">
+    <h2>資料來源</h2>
+    <p>各標章資料整理自官方網站（每張標章的「完整資料」裡都有連結）。台灣 EEWH 依內政部建築研究所《綠建築評估手冊》與<a href="https://gb.tabc.org.tw/">台灣建築中心綠建築標章網站</a>。「25 枚」為本站挑選的全球主要標章，不是官方分類。標章圖樣為本站繪製的示意徽章，不是各機構的官方 Logo。</p>
+    <p>資料整理日期：2026 年 11 月 27 日。制度常會改版，申請前請以官方最新版本為準。</p>
+    <p><a href="#top">回到最上面</a></p>
+  </div>
+</footer>
+
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" hidden>
+  <div class="drawer-bg" data-close></div>
+  <div class="drawer-panel">
+    <button class="drawer-x" data-close aria-label="關閉">×</button>
+    <div class="drawer-body"></div>
+  </div>
+</div>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>
