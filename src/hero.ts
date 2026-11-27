@@ -97,7 +97,7 @@ export function initHero(canvas: HTMLCanvasElement) {
     camera.aspect = r.width / r.height;
     const far = camera.aspect < 0.8 ? 21 : 15;
     camera.position.set(far * 0.62, far * 0.5, far * 0.72);
-    camera.lookAt(camera.aspect < 0.8 ? 0 : -3.6, 1.2, camera.aspect < 0.8 ? 0 : 2);
+    camera.lookAt(camera.aspect < 0.8 ? 0.4 : -3.6, camera.aspect < 0.8 ? 4.6 : 1.2, camera.aspect < 0.8 ? 0 : 2);
     camera.updateProjectionMatrix();
   }
 
@@ -112,7 +112,11 @@ export function initHero(canvas: HTMLCanvasElement) {
       pn.visible = k > 0.01;
     });
     roofGreen.scale.z = Math.max(0.001, phase(p, 0.55, 0.72));
+    roofGreen.visible = roofGreen.scale.z > 0.01;
     turbine.scale.y = Math.max(0.001, phase(p, 0.75, 0.9));
+    turbine.visible = turbine.scale.y > 0.01;
+    trees.forEach(tr => (tr.visible = tr.scale.x > 0.01));
+    grass.visible = grass.scale.x > 0.01;
     rotor.rotation.z = t * 0.0015 * (0.3 + phase(p, 0.8, 1));
     world.rotation.y = -0.35 + p * 0.7 + Math.sin(t * 0.0003) * 0.04;
     renderer.render(scene, camera);

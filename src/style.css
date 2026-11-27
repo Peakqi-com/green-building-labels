@@ -10,7 +10,7 @@ html { -webkit-text-size-adjust: 100%; }
 html.lock { overflow: hidden; }
 body { margin: 0; background: var(--paper); color: var(--ink); font: 400 17px/1.75 var(--sans); }
 h1, h2, h3, h4 { margin: 0; line-height: 1.2; font-weight: 900; letter-spacing: .01em; }
-h2 { font-size: clamp(31px, 5vw, 61px); }
+h2 { font-size: clamp(31px, 5vw, 61px); text-wrap: balance; }
 h3 { font-size: 25px; }
 p { margin: 0 0 1em; }
 a { color: var(--leaf); text-underline-offset: 3px; }
@@ -38,7 +38,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .hero h1 span:first-child { font-family: var(--latin), var(--sans); color: var(--leaf); }
 .hero-lead { max-width: 22em; font-size: 19px; margin-top: 22px; background: color-mix(in srgb, var(--paper) 80%, transparent); padding: 10px 14px; border-radius: 12px; }
 .hero-progress { top: calc(100svh - 76px); justify-self: end; margin-right: max(20px, 6vw); display: flex; gap: 8px; flex-wrap: wrap; }
-.hero-progress span { padding: 6px 12px; border-radius: 99px; border: 2px solid var(--ink); font-size: 14px; font-weight: 700; background: var(--paper); opacity: .35; transition: opacity .3s, background .3s; }
+.hero-progress span { padding: 6px 12px; border-radius: 99px; border: 2px solid var(--ink); font-size: 14px; font-weight: 700; background: var(--paper); opacity: .55; transition: opacity .3s, background .3s; }
 .hero-progress span.on { opacity: 1; background: var(--sun); }
 
 /* 四大面向 */
@@ -140,8 +140,8 @@ input[type=range]::-moz-range-thumb { width: 22px; height: 22px; border-radius: 
 .medal-score { font: 800 72px/1 var(--latin); }
 .medal-level { font-weight: 900; font-size: 22px; }
 .levels { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; width: 100%; }
-.levels li { border-top: 6px solid var(--c); padding-top: 6px; font-size: 14px; opacity: .5; }
-.levels li.on { opacity: 1; }
+.levels li { border-top: 6px solid color-mix(in srgb, var(--c) 40%, transparent); padding-top: 6px; font-size: 14px; color: var(--ink-2); }
+.levels li.on { border-top-color: var(--c); color: var(--ink); }
 .levels b { display: block; font-size: 15px; }
 
 /* 比較表 */
