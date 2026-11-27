@@ -95,6 +95,7 @@ export function initHero(canvas: HTMLCanvasElement) {
     const r = canvas.getBoundingClientRect();
     renderer.setSize(r.width, r.height, false);
     camera.aspect = r.width / r.height;
+    if (camera.aspect < 0.8) turbine.position.set(1.4, 0, -2.6); else turbine.position.set(-3.6, 0, 0.8);
     const far = camera.aspect < 0.8 ? 21 : 15;
     camera.position.set(far * 0.62, far * 0.5, far * 0.72);
     camera.lookAt(camera.aspect < 0.8 ? 0.4 : -3.6, camera.aspect < 0.8 ? 4.6 : 1.2, camera.aspect < 0.8 ? 0 : 2);
